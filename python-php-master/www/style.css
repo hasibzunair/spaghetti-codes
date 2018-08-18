@@ -1,0 +1,62 @@
+body{
+	margin:0;
+	background-color:#2980b9;
+}
+.container{
+	width:90%;
+	margin:auto;
+}
+.admin-area{
+	width:100%;
+	background-color:#2980b9;
+	overflow: hidden;
+}
+.form-area{
+	width:100%;
+	overflow: hidden;
+
+}
+.form-area h2{
+	font-size: 29px;
+	text-transform: capitalize;
+	text-align: center;
+	/*margin-top:30px 0;*/
+	color:#fff;
+}
+.form-area form{
+	margin-top:19%;
+	margin-left:35%;
+}
+.form-area form input{
+	width:50%;
+	display: block;
+	padding: 10px 5px;
+	margin:10px 0;
+	border-style: box;
+	border-radius: 5px;
+	border:1px solid #fff;
+}
+.form-area form input[type='submit']{
+	width:52%;
+	cursor:pointer;
+	color:#fff;
+	background-color:#000;
+	border:1px solid #000;
+	padding: 10px 5px;
+}
+/*.form-area form input[type='submit']:hover{
+	background-color:#2980b9;
+	color:#000;
+	transition: 1s;
+}*/
+table th{
+	border:1px solid #000;
+}
+table td{
+	border:1px solid #000;
+}
+.error{
+    color:red;
+    font-size:17px;
+    font-weight:bold;
+}

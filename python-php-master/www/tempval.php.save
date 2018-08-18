@@ -1,0 +1,14 @@
+<?php
+
+$username="root";
+$password="44455566";
+$database="val_database";
+
+mysql_connect(localhost,$username,$password);
+@mysql_select_db($database) or die( "Unable to select database");
+
+$sql = "SELECT val,datetime FROM  valLog";
+$result= mysql_query(
+?>
+
+

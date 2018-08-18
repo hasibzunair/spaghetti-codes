@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2 style="background-color:#00FFF;color:blue">
+<table width="100%" 
+ <thead><tr>
+   <td>NAME</td>
+   <td>FACETRACK</td>
+   <td>FINGERTRACK</td>
+   <td>RFIDTRACK</td>
+   <td>CHECKIN</td>
+   <td>CHECKOUT</td>
+   </tr>
+   </thead>
+   <tbody>
+</h2>
+
+<?php
+$servername ="localhost";
+$username="root";
+$password="44455566";
+$dbname="attendance_database";
+
+
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if($conn->connect_error) {
+     die("Connection failed" . $conn->connect_error);
+}
+
+
+$sql= "SELECT firstname,face,finger,rfid,datetime,datetimeend FROM attendanceLog";
+$result=$conn->query($sql);
+
+if($result->num_rows > 0){
+    while($row = $result->fetch_assoc()) {
+     echo
+"<tr>
+ 
+ <td>{$row["firstname"]}</td>
+<td>{$row["face"]}</td>
+<td>{$row["finger"]}</td>
+<td>{$row["rfid"]}</td>
+<td>{$row["datetime"]}</td>
+<td>{$row["datetimeend"]}</td>
+
+</tr>\n";
+    }
+
+} else {
+   echo "0 results";
+}
+
+$conn->close();
+?>
+
+
+
+
